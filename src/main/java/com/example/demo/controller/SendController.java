@@ -32,4 +32,22 @@ public class SendController {
         }
         return times;
     }
+
+    @RequestMapping("/topicSend1")
+    public String  topicSend1() {
+        String context = "my topic 1";
+        System.out.println("发送者说 : " + context);
+        amqpTemplate.convertAndSend("exchange" ,"topic.message" ,context);
+        return context;
+    }
+
+
+    @RequestMapping("/topicSend2")
+    public String topicSend2() {
+        String context = "my topic 2";
+        System.out.println("发送者说 : " + context);
+        amqpTemplate.convertAndSend("exchange", "topic.messages", context);
+        return context;
+    }
+
 }
