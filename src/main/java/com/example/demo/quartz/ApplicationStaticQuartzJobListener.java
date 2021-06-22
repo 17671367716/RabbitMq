@@ -18,7 +18,7 @@ import org.springframework.context.annotation.Configuration;
 public class ApplicationStaticQuartzJobListener implements ApplicationListener {
 
     @Autowired
-    private QuartzScheduler quartzScheduler;
+    private Scheduler quartzScheduler;
 
     /**
      * 初始启动quartz

@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 import java.util.Date;
 
 @Configuration
-public class QuartzScheduler {
+public class QuartzSchedulerConfig {
 
     @Autowired
     private Scheduler scheduler;

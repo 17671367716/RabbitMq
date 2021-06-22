@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.quartz.QuartzScheduler;
+import com.example.demo.quartz.QuartzSchedulerConfig;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 
@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class QuartzController {
 
     @Autowired
-    private QuartzScheduler quartzScheduler;
+    private QuartzSchedulerConfig quartzScheduler;
 
     @ApiOperation(value = "开始所有任务")
     @RequestMapping("/startAll")
